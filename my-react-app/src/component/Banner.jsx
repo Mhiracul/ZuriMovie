@@ -117,7 +117,7 @@ function Banner() {
           }}
         >
           <div
-            className="fixed top-4 flex items-center mt-2 rounded md:hidden right-4 z-50 cursor-pointer"
+            className="absolute top-4 flex items-center mt-2 rounded md:hidden right-4 z-50 cursor-pointer"
             onClick={toggleSearch}
           >
             {isSearchOpen ? (
