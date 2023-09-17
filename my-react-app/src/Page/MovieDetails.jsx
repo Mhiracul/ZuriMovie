@@ -97,7 +97,7 @@ function MovieDetails() {
 
   return (
     <>
-      <div className=" py-8 flex-1 ">
+      <div className=" py-8 flex-1 md:h-full overflow-y-auto">
         <div className="container mx-auto p-4">
           <div className="max-w-screen-xl mx-auto  overflow-hidden">
             <div className="flex flex-col gap-4 p-4">
@@ -118,7 +118,7 @@ function MovieDetails() {
               </div>
               <div className="mt-4 grid grid-cols-12 gap-4  md:mt-6 md:gap-6 2xl:mt-[1.875rem] 2xl:gap-[1.875rem]">
                 <div className="col-span-12 xl:col-span-8">
-                  <div className=" flex  md:text-sm text-xs items-center gap-4">
+                  <div className=" flex md:flex-row flex-col  md:text-sm text-xs md:items-center items-start gap-4">
                     <h2
                       className="text-sm font-semibold text-[#404040]"
                       data-testid="movie-title"
@@ -132,7 +132,7 @@ function MovieDetails() {
                       {movie.release_date}
                     </p>
                     <p className="text-gray-500" data-testid="movie-runtime">
-                      {movie.runtime}
+                      {movie.runtime} Minutes
                     </p>
                     <div className="flex items-center gap-2 text-gray-500">
                       {movie.genres.map((genre) => (
@@ -154,7 +154,7 @@ function MovieDetails() {
                       {movie.overview}
                     </p>
                   </div>
-                  <div className="flex flex-col ">
+                  <div className="flex md:text-sm flex-col text-xs">
                     <div className="mt-2 font-normal inline-flex items-center">
                       <h2 className=" ">Directors:</h2>
                       <ul>
@@ -210,7 +210,7 @@ function MovieDetails() {
                         key={similarMovie.id}
                         src={`https://image.tmdb.org/t/p/w500${similarMovie.poster_path}`}
                         alt={similarMovie.title}
-                        className="h-48"
+                        className="h-48 md:w-48 w-24"
                       />
                     ))}
                   </ul>

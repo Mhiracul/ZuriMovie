@@ -15,7 +15,7 @@ function Sidebar() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative ">
       {/* Hamburger icon */}
       <button
         className="md:hidden fixed right-4 top-4 z-10 p-2 rounded-md bg-white"
