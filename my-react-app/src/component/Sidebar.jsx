@@ -25,7 +25,7 @@ function Sidebar() {
       </button>
 
       <div
-        className={`w-48 bg-white border rounded-tr-[50px] rounded-br-[50px] border-gray-300 flex  flex-col h-screen ${
+        className={`w-48 bg-white border rounded-tr-[50px] overflow-y-auto rounded-br-[50px] border-gray-300 flex  flex-col h-screen ${
           isOpen ? "md:flex" : "hidden md:flex"
         }`}
       >
