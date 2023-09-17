@@ -29,4 +29,4 @@ yarn dev
 
 This will launch the development server, and your project will be available at http://localhost:5173.
 
-<img width="1440" alt="Screenshot 2023-09-17 at 01 05 17" src="https://github.com/Mhiracul/ZuriMovie/assets/106194709/a61ddbd3-35bd-43d6-8cca-d81cf336f13b">
+<img width="1440" alt="Screenshot 2023-09-17 at 01 05 17" src="https://github.com/Mhiracul/ZuriMovie/assets/106194709/050ce460-bda5-4429-88c8-6d575e02e9ef">
