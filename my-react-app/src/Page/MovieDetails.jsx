@@ -97,7 +97,7 @@ function MovieDetails() {
 
   return (
     <>
-      <div className=" py-8 flex-1 md:h-full overflow-y-auto">
+      <div className=" py-8 flex-1 ">
         <div className="container mx-auto p-4">
           <div className="max-w-screen-xl mx-auto  overflow-hidden">
             <div className="flex flex-col gap-4 p-4">
