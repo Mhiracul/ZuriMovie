@@ -132,7 +132,7 @@ function MovieDetails() {
                       {movie.release_date}
                     </p>
                     <p className="text-gray-500" data-testid="movie-runtime">
-                      {movie.runtime} Minutes
+                      {movie.runtime} <span>Minutes</span>
                     </p>
                     <div className="flex items-center gap-2 text-gray-500">
                       {movie.genres.map((genre) => (
