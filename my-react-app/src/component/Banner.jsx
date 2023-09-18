@@ -26,7 +26,7 @@ function Banner() {
   const [loading, setLoading] = useState(false); // State for loading indicator
 
   useEffect(() => {
-    const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
+    const apiUrl = `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=1`;
 
     axios
       .get(apiUrl)
@@ -107,7 +107,7 @@ function Banner() {
       )}
       {movies.length > 0 && (
         <div
-          className="w-full h-full bg-fixed bg-blend-overlay bg-black/20"
+          className="w-full h-full bg-fixed  bg-blend-overlay bg-black/20"
           style={{
             background: `linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(${currentMovie})`,
             backgroundSize: "cover",
@@ -186,7 +186,13 @@ function Banner() {
 
       {showModal && (
         <div className="fixed container mx-auto  inset-0 flex items-center justify-center bg-black bg-opacity-60 z-50">
-          <div className="bg-white overflow-y-auto h-80 p-4 rounded-lg">
+          <div className="bg-white overflow-y-auto h-80 p-4 rounded-lg relative">
+            <button
+              onClick={() => setShowModal(false)}
+              className="absolute  right-9 bg-red-600 text-white px-4 py-2 rounded-lg"
+            >
+              Close
+            </button>
             <h2 className="text-2xl font-semibold mb-2">Search Results!</h2>
             {searchResults.map((movie) => (
               <div
@@ -202,12 +208,6 @@ function Banner() {
                 <hr className="my-2" />
               </div>
             ))}
-            <button
-              onClick={() => setShowModal(false)}
-              className="bg-red-600 text-white px-4 py-2 rounded-lg mt-4"
-            >
-              Close
-            </button>
           </div>
         </div>
       )}

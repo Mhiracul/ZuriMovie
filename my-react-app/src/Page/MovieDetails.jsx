@@ -91,6 +91,11 @@ function MovieDetails() {
     fetchAdditionalDetails();
   }, [id, apiKey]);
 
+  const formatReleaseDateToUTCISO = (releaseDate) => {
+    const date = new Date(releaseDate);
+    return date.toISOString();
+  };
+
   if (!movie) {
     return <div>Loading...</div>;
   }
@@ -129,10 +134,10 @@ function MovieDetails() {
                       className="text-gray-500 "
                       data-testid="movie-release-date"
                     >
-                      {movie.release_date}
+                      {formatReleaseDateToUTCISO(movie.release_date)}
                     </p>
                     <p className="text-gray-500" data-testid="movie-runtime">
-                      {movie.runtime} <span>Minutes</span>
+                      {movie.runtime}
                     </p>
                     <div className="flex items-center gap-2 text-gray-500">
                       {movie.genres.map((genre) => (

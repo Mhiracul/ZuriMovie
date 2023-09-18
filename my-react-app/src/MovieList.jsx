@@ -15,7 +15,7 @@ const MovieList = ({ setNotification }) => {
     axios
       .get(apiUrl)
       .then(async (response) => {
-        const top10Movies = response.data.results.slice(0, 11);
+        const top10Movies = response.data.results.slice(0, 10);
 
         const moviesWithDetails = await Promise.all(
           top10Movies.map(async (movie) => {
@@ -71,7 +71,7 @@ const MovieList = ({ setNotification }) => {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-12 gap-4 max-w-screen-3xl mx-auto">
-        {movies.slice(1).map((movie) => (
+        {movies.slice(0).map((movie) => (
           <MovieCard
             key={movie.id}
             movie={movie}
